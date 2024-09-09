@@ -1,0 +1,28 @@
+.InputRange {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  font-family: var(--font-avenir);
+  line-height: 16px;
+  color: var(--color-gray);
+
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+
+  & > span {
+    color: var(--color-gray);
+    font-family: var(--font-avenir);
+  }
+
+  &_active {
+    .CurrentLength {
+      color: var(--color-green);
+    }
+
+    .MaxLength {
+      color: var(--color-red);
+    }
+  }
+}

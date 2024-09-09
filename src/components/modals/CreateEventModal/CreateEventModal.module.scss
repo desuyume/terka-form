@@ -1,0 +1,83 @@
+@import '../../../assets/scss/_mixins.scss';
+
+.CreateEventModal {
+  width: 405px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+
+  @include w360 {
+    width: 304px;
+  }
+
+  .ModalDescription {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-dark-gray);
+
+    margin-bottom: 32px;
+
+    @include w360 {
+      font-size: 16px;
+      line-height: 24px;
+
+      margin-bottom: 28px;
+    }
+  }
+
+  .ModalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include w360 {
+      gap: 28px;
+    }
+
+    .ModalFields {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .ModalField {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+  }
+
+  .ModalButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17.5px;
+
+    @include w360 {
+      padding: 0;
+    }
+
+    button {
+      padding: 0;
+    }
+
+    .CancelButton {
+      width: 157px;
+
+      @include w360 {
+        flex: 1;
+
+        &:hover {
+          outline: none;
+        }
+      }
+    }
+
+    .SentButton {
+      width: 182px;
+
+      font-weight: 400;
+    }
+  }
+}

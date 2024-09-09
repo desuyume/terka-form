@@ -1,0 +1,10 @@
+.Label {
+  color: var(--color-black);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+
+  position: relative;
+}

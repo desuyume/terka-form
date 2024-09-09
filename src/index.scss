@@ -1,0 +1,54 @@
+@import '../src/assets/fonts/ProximaNova/stylesheet.css';
+@import '../src/assets/fonts/AvenirNextCyr/stylesheet.css';
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #d4d3d9;
+  --color-red: #ee2c2c;
+  --color-green: #4ab538;
+  --color-dark-gray: #797983;
+  --color-gray-umber: #303030;
+
+  --font-proxima: 'Proxima Nova', sans-serif;
+  --font-avenir: 'Avenir Next Cyr', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  color: var(--color-black);
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: var(--font-proxima);
+
+  overflow-x: hidden;
+}
+
+a {
+  font-family: var(--font-proxima);
+  font-size: 16px;
+  text-decoration: none;
+
+  color: var(--color-black);
+
+  &._active {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+input:focus-within,
+textarea:focus-within {
+  outline: 1px solid var(--color-black);
+}

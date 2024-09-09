@@ -1,0 +1,75 @@
+.Switch {
+  display: inline-flex;
+
+  .SliderWrapper {
+    width: 48px;
+    height: 24px;
+    margin-right: 12px;
+
+    position: relative;
+
+    input {
+      opacity: 0;
+
+      width: 0;
+      height: 0;
+
+      &:checked + .Slider {
+        background-color: var(--color-black);
+
+        outline: transparent;
+      }
+
+      &:checked + .Slider::before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(24px);
+      }
+    }
+
+    .Slider {
+      width: 48px;
+      height: 24px;
+      outline: 0.5px solid rgba(121, 121, 131, 0.3);
+      border-radius: 12px;
+
+      cursor: pointer;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: rgba(121, 121, 131, 0.05);
+
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+
+      &::before {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        content: '';
+
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+
+        background-color: white;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.08),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        -webkit-transition: 0.4s;
+
+        transition: 0.4s;
+      }
+    }
+  }
+
+  .Label {
+    color: var(--color-gray-umber);
+
+    align-self: center;
+  }
+}

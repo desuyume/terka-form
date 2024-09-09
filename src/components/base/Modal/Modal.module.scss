@@ -1,0 +1,76 @@
+@import '../../../assets/scss/_mixins.scss';
+
+.Modal {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.25);
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 100;
+
+  transition: 0.2s linear all;
+
+  &_open {
+    opacity: 100;
+    visibility: visible;
+  }
+
+  .ModalContent {
+    position: relative;
+
+    padding: 32px;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.08),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: var(--color-white);
+
+    @include w360 {
+      padding: 24px 18px;
+    }
+
+    .ModalHeader {
+      .ModalTitle {
+        color: #1a1a1a;
+        line-height: 44px;
+
+        @include w360 {
+          font-size: 21px;
+          line-height: 26px;
+        }
+      }
+
+      .ModalIconWrapper {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 32px;
+        right: 32px;
+
+        @include w360 {
+          top: 17px;
+          right: 5px;
+        }
+
+        .ModalClose {
+          cursor: pointer;
+
+          z-index: 10;
+        }
+      }
+    }
+  }
+}

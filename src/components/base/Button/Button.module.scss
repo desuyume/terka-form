@@ -1,0 +1,46 @@
+.Button {
+  font-family: var(--font-proxima);
+  font-size: 18px;
+
+  height: 48px;
+  padding: 0 57px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.4s ease all;
+
+  &__primary {
+    color: var(--color-white);
+    background-color: var(--color-gray-umber);
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__secondary {
+    color: var(--color-gray-umber);
+    background-color: var(--color-white);
+    font-weight: 400;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__ghost {
+    color: var(--color-gray-umber);
+    background-color: transparent;
+
+    height: fit-content;
+    padding: 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

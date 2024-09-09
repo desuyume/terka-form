@@ -1,0 +1,106 @@
+@import '../../../assets/scss/_mixins.scss';
+
+.Form {
+  margin-top: 30px;
+
+  .FormSubtitle {
+    margin-bottom: 24px;
+  }
+
+  .FormWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+
+    .FormFlex {
+      display: flex;
+      gap: 16px;
+
+      > * {
+        flex: 1;
+      }
+
+      @include w360 {
+        flex-direction: column;
+      }
+    }
+
+    .CoverUploadContainer {
+      max-width: 100%;
+      width: 390px;
+      height: 240px;
+    }
+
+    .DetailsUploadContainer {
+      width: 718px;
+      height: 240px;
+
+      @include w360 {
+        max-width: 100%;
+      }
+    }
+
+    .FormCost {
+      position: relative;
+
+      align-items: center;
+
+      .FormCostInput {
+        padding-top: 2.5px;
+        gap: 9.5px;
+
+        &_hidden {
+          input {
+            display: none;
+          }
+        }
+      }
+
+      .FormCostSwitch {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .FormLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+
+      @include w360 {
+        gap: 16px;
+      }
+
+      .FormLink {
+        display: flex;
+        gap: 14px;
+
+        & > * {
+          flex: 1;
+        }
+
+        @include w360 {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+  }
+
+  .FormButtons {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+
+    @include w360 {
+      width: 100%;
+      flex-direction: column;
+
+      & > button:first-of-type {
+        width: 100%;
+      }
+    }
+  }
+}

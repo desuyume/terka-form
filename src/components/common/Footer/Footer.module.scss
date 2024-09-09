@@ -1,0 +1,42 @@
+@import '../../../assets/scss/_mixins.scss';
+
+.Footer {
+  position: relative;
+
+  width: 100vw;
+  max-width: 100vw;
+  height: 95px;
+
+  background-image: url('footer.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .Gopnik {
+    width: 407.15px;
+    height: 516px;
+
+    position: absolute;
+    right: 0.15px;
+    bottom: 54px;
+
+    @include w1440 {
+      width: 312.46px;
+      height: 396px;
+    }
+
+    @include w1024 {
+      right: 0.46px;
+    }
+
+    @include w768 {
+      width: 246.18px;
+      height: 312px;
+    }
+
+    @include w360 {
+      bottom: 0;
+      right: 0.18px;
+    }
+  }
+}

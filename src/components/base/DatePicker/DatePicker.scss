@@ -1,0 +1,42 @@
+.mantine-DatePickerInput-root {
+  height: 53px;
+
+  .mantine-DatePickerInput-wrapper {
+    height: 100%;
+
+    .mantine-DatePickerInput-input {
+      height: 100%;
+      padding-left: 16px;
+
+      color: var(--color-black);
+      font-size: 16px;
+      font-family: var(--font-proxima);
+
+      &:focus,
+      &:focus-within {
+        border: 1px solid var(--color-black);
+      }
+
+      .mantine-DatePickerInput-placeholder {
+        font-size: 16px;
+        color: var(--color-dark-gray);
+      }
+    }
+
+    .mantine-Input-icon {
+      width: auto;
+
+      right: 16px;
+      left: auto;
+    }
+  }
+
+  &_error .mantine-DatePickerInput-wrapper .mantine-DatePickerInput-input {
+    border: 1px solid var(--color-red);
+
+    &:focus,
+    &:focus-within {
+      border: 1px solid var(--color-red);
+    }
+  }
+}

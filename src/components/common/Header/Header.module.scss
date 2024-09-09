@@ -1,0 +1,53 @@
+@import '../../../assets/scss/_mixins.scss';
+
+.Header {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include w360 {
+    height: 60px;
+    padding: 0px 3px;
+  }
+
+  .LogoLink {
+    width: 124px;
+    height: 33px;
+
+    .Logo {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include w360 {
+      width: 100px;
+      height: 26px;
+    }
+  }
+
+  .Navbar {
+    a + a {
+      margin-left: 52px;
+    }
+
+    @include w768 {
+      display: none;
+    }
+  }
+
+  .Account {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    .Name {
+      text-transform: uppercase;
+      text-align: right;
+
+      margin-right: 12px;
+    }
+  }
+}
