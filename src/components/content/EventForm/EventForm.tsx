@@ -23,6 +23,7 @@ import { EventSchemaProps } from '@sharedTypes/event.types';
 
 import s from './EventForm.module.scss';
 import useCropState from '@hooks/useCropState';
+import useWindowsize from '@hooks/useWindowSize';
 
 type Props = {
   form: UseFormReturn<EventSchemaProps>;
@@ -42,6 +43,7 @@ const EventForm: FC<Props> = ({
   coverImg,
   detailsImg,
 }) => {
+  const { width } = useWindowsize();
   const state = watch();
 
   const handleChange = (key: keyof EventSchemaProps, value: any) => {
@@ -184,7 +186,7 @@ const EventForm: FC<Props> = ({
 
         <div className={s.FormCost}>
           <Label
-            label='Стоимость мероприятия, руб.'
+            label={`Стоимость мероприятия${width && width > 400 ? ', руб.' : ''}`}
             className={clsx({
               [s.FormCostInput]: true,
             })}
